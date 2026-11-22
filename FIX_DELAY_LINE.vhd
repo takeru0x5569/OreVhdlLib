@@ -12,7 +12,7 @@ Port(
     i_RST_p   :in  std_logic;
     i_SOURCE_p:in  std_logic;
     o_DELAY_p :out std_logic;
-    o_BUSY    :out std_logic --動作中ビジー
+    o_BUSY_h  :out std_logic --動作中ビジー
     );
 end entity;
 
@@ -52,6 +52,6 @@ process(i_CLK,i_RST_p)begin
 end process;
 --出力
 o_DELAY_p <= count_end; --FF出しはしていない
-o_BUSY <=busy;
+o_BUSY_h <=busy;
 
 end architecture;
