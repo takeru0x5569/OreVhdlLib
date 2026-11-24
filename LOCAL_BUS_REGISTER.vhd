@@ -20,7 +20,7 @@ entity LOCAL_BUS_REGISTER is
     i_RST_p         :in  std_logic;
     i_BUS_CMD       :in  typBusCommand;
     o_BUS_ACK       :out std_logic_vector(BUS_DAT_WIDTH-1 downto 0);
-    o_BUS_REG       :typRegisterArray(0 to 1);
+    o_BUS_REG       :typRegisterArray(0 to 1)
     );
 end entity;
 
