@@ -1,4 +1,9 @@
---デシリアライザ：シリパラ変換
+-- Copyright (c) 2026 takeRu0x5569
+-- This software is released under the MIT License.
+---------------------------------------------------------------------
+-- Document : 
+-- Module   :デシリアライザ(シリパラ変換)
+---------------------------------------------------------------------
 --i_SHIFT_pのアサートでシフト。i_POP_pアサートでパラレル出力更新
 library ieee;
 use ieee.std_logic_1164.all;

@@ -1,4 +1,9 @@
---同期化D-FlipFlopとエッジ検出(チャタリング無し入力)
+-- Copyright (c) 2026 takeRu0x5569
+-- This software is released under the MIT License.
+---------------------------------------------------------------------
+-- Document : 
+-- Module   :エッジ検出
+---------------------------------------------------------------------
 library ieee;
 use ieee.std_logic_1164.all;
 

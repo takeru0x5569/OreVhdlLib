@@ -1,9 +1,14 @@
---UARTの受信モジュール
+-- Copyright (c) 2026 takeRu0x5569
+-- This software is released under the MIT License.
+---------------------------------------------------------------------
+-- Document : 
+-- Module   :UART受信
+---------------------------------------------------------------------
 --8bit,パリティなし、ストップ1bit、ボーレート115200
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.std_logic_unsigned.all;
-use IEEE.std_logic_arith.all;
+-- use IEEE.std_logic_unsigned.all;
+-- use IEEE.std_logic_arith.all;
 
 entity UART_RX is
 generic(

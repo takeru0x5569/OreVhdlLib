@@ -1,7 +1,11 @@
+-- Copyright (c) 2026 takeRu0x5569
+-- This software is released under the MIT License.
+---------------------------------------------------------------------
+-- Document : 
+-- Module   :UART送信
+---------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.STD_LOGIC_ARITH.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity UART_TX is
 generic(

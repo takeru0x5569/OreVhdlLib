@@ -1,4 +1,9 @@
---同期化＆エッジ検出
+-- Copyright (c) 2026 takeRu0x5569
+-- This software is released under the MIT License.
+---------------------------------------------------------------------
+-- Document : 
+-- Module   :同期化DFF＆エッジ検出
+---------------------------------------------------------------------
 library ieee;
 use ieee.std_logic_1164.all;
 

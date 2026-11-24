@@ -1,4 +1,9 @@
---ローカルバスレジスタ
+-- Copyright (c) 2026 takeRu0x5569
+-- This software is released under the MIT License.
+---------------------------------------------------------------------
+-- Document : 
+-- Module   :ローカルバスレジスタ
+---------------------------------------------------------------------
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;
@@ -7,13 +12,15 @@ use work.pkgTYPEDEF.all;
 
 entity LOCAL_BUS_REGISTER is
     generic(
-    REG_ADDRESS_BASE    : std_logic_vector(3 downto 0)  := x"0"
+    REG_ADDRESS_BASE    :std_logic_vector(3 downto 0)  := x"0";
+    REG_NUMBER          :integer := 16
     );
     port(
     i_CLK           :in  std_logic;
     i_RST_p         :in  std_logic;
     i_BUS_CMD       :in  typBusCommand;
-    o_BUS_ACK       :out std_logic_vector(BUS_DAT_WIDTH-1 downto 0)
+    o_BUS_ACK       :out std_logic_vector(BUS_DAT_WIDTH-1 downto 0);
+    o_BUS_REG       :typRegisterArray(0 to 1);
     );
 end entity;
 

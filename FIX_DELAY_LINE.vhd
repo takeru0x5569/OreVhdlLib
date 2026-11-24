@@ -1,4 +1,9 @@
---固定遅延
+-- Copyright (c) 2026 takeRu0x5569
+-- This software is released under the MIT License.
+---------------------------------------------------------------------
+-- Document : 
+-- Module   :固定遅延
+---------------------------------------------------------------------
 --遅延カウント動作中(busyが立っている間)にアサートされた入力は無視する
 library ieee;
 use ieee.std_logic_1164.all;

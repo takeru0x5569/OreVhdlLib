@@ -1,4 +1,10 @@
---エンコーダ検出器：90度位相差A相B相インクリメンタルエンコーダーのUP/DOWNタイミング検出
+-- Copyright (c) 2026 takeRu0x5569
+-- This software is released under the MIT License.
+---------------------------------------------------------------------
+-- Document : 
+-- Module   :エンコーダ検出器
+---------------------------------------------------------------------
+--90度位相差A相B相インクリメンタルエンコーダーのUP/DOWNタイミング検出
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.std_logic_unsigned.all;

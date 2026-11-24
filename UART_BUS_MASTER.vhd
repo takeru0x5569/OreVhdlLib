@@ -1,3 +1,9 @@
+-- Copyright (c) 2026 takeRu0x5569
+-- This software is released under the MIT License.
+---------------------------------------------------------------------
+-- Document : 
+-- Module   :UARTローカルバスマスタ
+---------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.std_logic_unsigned.all;
@@ -24,12 +30,6 @@ architecture RTL of UART_BUS_MASTER is
     type tSTATE is (CMD,ADR,D3,D2,D1,D0,EXE,ACK);
     signal state        :tSTATE;
     signal mode         :tMODE;
-    -- signal rx_bit       :std_logic;
-    -- signal rx_fall      :std_logic;
-    -- signal rx_begin     :std_logic;
-    -- signal rx_start     :std_logic;
-    -- signal rx_tick      :std_logic;
-    -- signal rx_end       :std_logic;
     signal rx_char    :std_logic_vector(7 downto 0);
     signal rx_ena     :std_logic;
     signal busy       :std_logic_vector(0 to 1);
@@ -69,7 +69,7 @@ port map
 ,i_RST_p        =>i_RST_p
 ,i_DATA_SET_p   =>tx_start_p
 ,i_DATA         =>ack_data
-,o_BUSY         =>open
+,o_BUSY_h       =>open
 ,o_UART_TX      =>o_UART_TX
 );
 tx_start_p <= rx_ena;
