@@ -24,7 +24,7 @@ architecture RTL of EDGE_DETECT is
     signal fall   :std_logic;
 begin
 
---入力同期化バッファFF
+--バッファFF
 process(i_CLK,i_RST_p)begin
     if(i_RST_p='1')then
         buf_ff <= '0';
