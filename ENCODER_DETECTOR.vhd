@@ -11,6 +11,9 @@ use IEEE.std_logic_unsigned.all;
 use IEEE.std_logic_arith.all;
 
 entity ENCODER_DETECTOR is 
+    generic(
+    USE_OUTPUT_FF :boolean:=true    --出力FF使用有無
+    );
     port(
     i_CLK           :in  std_logic;
     i_RST_p         :in  std_logic;
@@ -66,7 +69,22 @@ end generate;
     encoder_down(2)<='1'when((fall_p(1)='1')and(enc_sync(0)='1'))else '0';
     encoder_down(3)<='1'when((fall_p(0)='1')and(enc_sync(1)='0'))else '0';
     encoder_down_or <=encoder_down(0)or encoder_down(1) or encoder_down(2)or encoder_down(3);
--- 出力
-o_UP_p      <=encoder_up_or;
-o_DOWN_p    <=encoder_down_or;
+-- 出力FF有り
+GEN_OUTPUT_FF: if USE_OUTPUT_FF generate
+    process(i_CLK,i_RST_p)begin
+        if(i_RST_p='1')then
+            o_UP_p      <='0';
+            o_DOWN_p    <='0';
+        elsif(rising_edge(i_CLK))then
+            o_UP_p      <=encoder_up_or;
+            o_DOWN_p    <=encoder_down_or;
+        end if;
+    end process;
+end generate;
+-- 出力FF無し
+GEN_OUTPUT_COMB: if not USE_OUTPUT_FF generate
+    o_UP_p      <=encoder_up_or;
+    o_DOWN_p    <=encoder_down_or;
+end generate;
+
 end architecture;
